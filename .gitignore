@@ -34,3 +34,6 @@ Thumbs.db
 *.pem
 *.pka
 *.ppk
+
+# dev docs
+*.pdf

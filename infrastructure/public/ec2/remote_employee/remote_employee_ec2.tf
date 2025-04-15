@@ -10,4 +10,13 @@ resource "aws_instance" "external_pc" {
   tags = {
     Name = var.ec2_name
   }
+
+  depends_on = [
+    var.bucket_id
+  ]
+}
+
+output "external_pc_public_ip" {
+  value = aws_instance.external_pc.public_ip
+  description = "Public IP of the Remote Employee EC2 instance"
 }

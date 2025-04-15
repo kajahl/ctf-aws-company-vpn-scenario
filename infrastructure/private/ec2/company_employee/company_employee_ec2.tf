@@ -13,4 +13,8 @@ resource "aws_instance" "company_employee" {
   tags = {
     Name = var.ec2_name
   }
+  
+  depends_on = [
+    var.bucket_id
+  ]
 }

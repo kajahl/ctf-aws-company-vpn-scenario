@@ -15,6 +15,12 @@ module "keys" {
   # outputs -> remote_key_name
 }
 
+module "s3" {
+    source = "./infrastructure/s3"
+
+    # outputs -> bucket_id, bucket_name
+}
+
 ### Public infrastructure ###
 
 module "public_infrastructure" {
@@ -34,6 +40,8 @@ module "public_ec2_employee" {
   user_data          = file("./infrastructure/public/ec2/remote_employee/init.sh")
   ec2_name           = "Remote Employee"
   public_ip          = true
+  bucket_id = module.s3.bucket_id
+  bucket_name = module.s3.bucket_name
 }
 
 ### Private infrastructure ###
@@ -54,7 +62,10 @@ module "company_ec2_employee" {
   company_sg_id     = module.company_infrastructure.company_sg_id
   user_data         = file("./infrastructure/private/ec2/company_employee/init.sh")
   ec2_name          = "Company Employee"
+  bucket_id = module.s3.bucket_id
+  bucket_name = module.s3.bucket_name
 
+  # Dev
   remote_key_name   = module.keys.remote_key_name
   company_dev_sg_id = module.company_infrastructure.company_dev_sg_id
   public_ip         = true
@@ -68,10 +79,14 @@ module "company_ec2_soc" {
   company_sg_id     = module.company_infrastructure.company_sg_id
   user_data         = file("./infrastructure/private/ec2/company_soc/init.sh")
   ec2_name          = "Company SOC"
-  public_ip         = true
+  remote_key_name   = module.keys.soc_key_name
+  bucket_id = module.s3.bucket_id
+  bucket_name = module.s3.bucket_name
+  soc_key_dependency = module.keys.soc_private_key
 
-  remote_key_name   = module.keys.remote_key_name
+  # Dev
   company_dev_sg_id = module.company_infrastructure.company_dev_sg_id
+  public_ip         = true
 }
 
 module "company_ec2_archive" {
@@ -82,8 +97,17 @@ module "company_ec2_archive" {
   company_sg_id     = module.company_infrastructure.company_sg_id
   ec2_name          = "Company Archive"
   user_data         = file("./infrastructure/private/ec2/company_archive/init.sh")
+  bucket_id = module.s3.bucket_id
+  bucket_name = module.s3.bucket_name
+  soc_key_dependency = module.keys.soc_private_key
 
+  # Dev
   remote_key_name   = module.keys.remote_key_name
   company_dev_sg_id = module.company_infrastructure.company_dev_sg_id
   public_ip         = true
+}
+
+output "external_pc_public_ip" {
+  value = module.public_ec2_employee.external_pc_public_ip
+  description = "Public IP of the Remote Employee EC2 instance"
 }

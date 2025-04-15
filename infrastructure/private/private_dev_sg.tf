@@ -4,6 +4,14 @@ resource "aws_security_group" "company_dev_sg" {
   vpc_id      = aws_vpc.company_vpc.id
 
   ingress {
+    # Port SSH (Secure Shell)
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
     # Typowy port dla FTP (kontrola)
     from_port   = 21
     to_port     = 21

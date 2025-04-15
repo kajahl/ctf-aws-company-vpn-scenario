@@ -14,3 +14,9 @@ variable "remote_key_name" {}
 variable "public_ip" {
   default = false
 }
+
+variable bucket_id {}
+variable bucket_name {}
+variable bucket_file_prefix {
+  default = "company-employee"
+}

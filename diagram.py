@@ -2,6 +2,7 @@ from diagrams import Diagram, Cluster
 from diagrams.aws.compute import EC2
 from diagrams.aws.network import VPC, InternetGateway, ClientVpn
 from diagrams.aws.security import IAM
+from diagrams.aws.storage import S3
 
 with Diagram("AWS CTF Infrastructure", show=False):
     # Reprezentacja wygenerowanego klucza SSH (AWS Key Pair)
@@ -32,3 +33,7 @@ with Diagram("AWS CTF Infrastructure", show=False):
     ext_pc >> vpn
     vpn >> company_vpc
     company_vpc >> [pc1, pc2, pc3]
+
+    # S3 Bucket
+    s3_bucket = S3("S3 Bucket\n(File Storage)")
+    s3_bucket >> [pc1, pc2, pc3, ext_pc]

@@ -40,3 +40,6 @@ Thumbs.db
 
 # link .aws
 .aws.lnk
+
+# generated init files (contains sensitive data)
+init.sh

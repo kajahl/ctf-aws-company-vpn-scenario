@@ -45,3 +45,5 @@ pasv_address=${MY_PUBLIC_IP}
 CONF
 systemctl restart vsftpd
 
+sudo apt install nmap
+sudo apt install net-tools

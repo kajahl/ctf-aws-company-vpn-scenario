@@ -70,9 +70,6 @@ for ec2_directory in ec2_directories:
     else:
         print(f'Nie znaleziono pliku {template_init_filepath}')
 
-# TODO: Wygenerowanie zestawu flag
-# TODO: Umieszczenie flag w odpowiednich miejscach
-
 # Stworzenie archiwów files.zip dla poszczególnych instancji
 source_folder_name = 'files'
 destination_filename = 'files.zip'

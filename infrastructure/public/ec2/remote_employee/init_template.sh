@@ -23,3 +23,8 @@ aws s3 cp s3://s3-ctf-files-bucket/remote-employee/files.zip ~/files.zip
 # install tools
 sudo apt install nmap
 sudo apt install net-tools
+
+# flagi
+
+sudo ip link add name ctf-FLAGA_CTF_1 type dummy
+sudo ip link set ctf-FLAGA_CTF_1 up

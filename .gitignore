@@ -49,5 +49,5 @@ init.sh
 flags.csv
 
 # ec2 files
-files
+files_ready
 files.zip

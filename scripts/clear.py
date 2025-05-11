@@ -1,4 +1,5 @@
 import os
+import shutil
 
 # Ścieżka bazowa skryptu (lokalizacja pliku clear.py)
 base_path = os.path.dirname(os.path.abspath(__file__))
@@ -25,7 +26,9 @@ for ec2_directory in ec2_directories_absolute:
 
 # Usuwanie plików init.sh i files.zip
 files_to_remove = ['init.sh', 'files.zip']
+folder_to_remove = 'files_ready'
 for ec2_directory in ec2_directories:
+    # Usuwanie plików
     for file_name in files_to_remove:
         file_path = os.path.join(ec2_directory, file_name)
         if os.path.exists(file_path):
@@ -33,3 +36,11 @@ for ec2_directory in ec2_directories:
             print(f"Usunięto plik: {file_path}")
         else:
             print(f"Plik nie istnieje: {file_path}")
+    
+    # Usuwanie folderu files
+    folder_path = os.path.join(ec2_directory, folder_to_remove)
+    if os.path.exists(folder_path) and os.path.isdir(folder_path):
+        shutil.rmtree(folder_path)
+        print(f"Usunięto folder: {folder_path}")
+    else:
+        print(f"Folder nie istnieje: {folder_path}")

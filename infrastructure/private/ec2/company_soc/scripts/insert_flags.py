@@ -1,0 +1,1 @@
+print('Wykonywanie skryptu Python dla instancji EC2: company_soc')

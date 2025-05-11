@@ -19,3 +19,7 @@ EOL
 
 # s3-bucket file structure
 aws s3 cp s3://s3-ctf-files-bucket/remote-employee/files.zip ~/files.zip
+
+# install tools
+sudo apt install nmap
+sudo apt install net-tools

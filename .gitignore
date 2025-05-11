@@ -45,5 +45,9 @@ Thumbs.db
 # generated init files (contains sensitive data)
 init.sh
 
+# unique flags per session
+flags.csv
+
 # ec2 files
+files
 files.zip

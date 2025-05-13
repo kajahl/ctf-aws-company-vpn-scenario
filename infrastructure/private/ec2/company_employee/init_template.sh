@@ -15,7 +15,7 @@ done
 apt-get update && apt-get upgrade -y
 
 # install tools
-sudo apt-get install -y nmap net-tools unzip ftp
+sudo apt-get install -y nmap net-tools unzip lftp
 
 # install aws cli
 apt-get install -y awscli

@@ -45,6 +45,7 @@ MY_PRIVATE_IP=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
 cat <<CONF > /etc/vsftpd.conf
 listen=YES
 anonymous_enable=YES
+allow_writeable_chroot=YES
 local_enable=YES
 write_enable=YES
 dirmessage_enable=YES

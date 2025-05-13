@@ -44,33 +44,22 @@ apt-get install -y vsftpd
 MY_PRIVATE_IP=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
 cat <<CONF > /etc/vsftpd.conf
 listen=YES
-
-chroot_local_user=YES
-secure_chroot_dir=/var/run/vsftpd/empty
-allow_writeable_chroot=YES
-allow_writable_chroot=YES
-
+anonymous_enable=YES
 local_enable=YES
 write_enable=YES
-xferlog_enable=YES
 dirmessage_enable=YES
-
 use_localtime=YES
-
+xferlog_enable=YES
 connect_from_port_20=YES
-
+chroot_local_user=YES
+secure_chroot_dir=/var/run/vsftpd/empty
 pam_service_name=vsftpd
 rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
 rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
-
 pasv_enable=YES
 pasv_min_port=10000
 pasv_max_port=10100
 pasv_address=${MY_PRIVATE_IP}
-
-nopriv_user=ftp
-anon_world_readable_only=NO
-anon_root=/srv/ftp
 CONF
 systemctl restart vsftpd
 

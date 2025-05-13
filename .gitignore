@@ -51,3 +51,6 @@ flags.csv
 # ec2 files
 files_ready
 files.zip
+
+# python
+__pycache__/

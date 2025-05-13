@@ -6,9 +6,10 @@
 6;plik syslog.txt /w EC2:Company_Archive;FLAGA_CTF_6
 7;plik yara_rule_trickbot.txt /w EC2:Company_Archive;FLAGA_CTF_7
 8;plik CVE-2021-34527.txt /w EC2:Company_Archive;FLAGA_CTF_8
-9;plik logs.log /w EC2:Company_Archive;FLAGA_CTF_9
+9;plik logs.log /w EC2:Company_SOC;FLAGA_CTF_9
 10;plik investigation_notes.txt /w EC2:Company_SOC;FLAGA_CTF_10
 11;plik incident_report.txt /w EC2:Company_SOC;FLAGA_CTF_11
-12;plik Hashes.txt /w EC2:Company_Archive;FLAGA_CTF_12
+12;plik Hashes.txt /w EC2:Company_SOC;FLAGA_CTF_12
 13;plik AD_users.txt /w EC2:Company_SOC;FLAGA_CTF_13
 14;plik case_37.txt /w EC2:Company_SOC (base64);FLAGA_CTF_14
+15;plik image3.jpg /w EC2:Company_SOC (base64);FLAGA_CTF_15

@@ -1,5 +1,14 @@
-1;nazwa karty sieciowej;FLAGA_CTF_1
-2;plik w archiwum firmy;FLAGA_CTF_2
-3;ukryte w zdjeciu sprawy soc bruteforce;FLAGA_CTF_3
-4;strona html archiwum firmy;FLAGA_CTF_4
-5;serwis na komputerze soc, port 1337;FLAGA_CTF_5
+1;nazwa karty sieciowej /w EC2:Remote_Employee;FLAGA_CTF_1
+2;strona html /w EC2:Company_Archive;FLAGA_CTF_2
+3;plik firewall config /w EC2:Company_Archive;FLAGA_CTF_3
+4;plik server_config.txt /w EC2:Company_Archive;FLAGA_CTF_4
+5;plik ssh_public_key /w EC2:Company_Archive;FLAGA_CTF_5
+6;plik syslog.txt /w EC2:Company_Archive;FLAGA_CTF_6
+7;plik yara_rule_trickbot.txt /w EC2:Company_Archive;FLAGA_CTF_7
+8;plik CVE-2021-34527.txt /w EC2:Company_Archive;FLAGA_CTF_8
+9;plik logs.log /w EC2:Company_Archive;FLAGA_CTF_9
+10;plik investigation_notes.txt /w EC2:Company_SOC;FLAGA_CTF_10
+11;plik incident_report.txt /w EC2:Company_SOC;FLAGA_CTF_11
+12;plik Hashes.txt /w EC2:Company_Archive;FLAGA_CTF_12
+13;plik AD_users.txt /w EC2:Company_SOC;FLAGA_CTF_13
+14;plik case_37.txt /w EC2:Company_SOC (base64);FLAGA_CTF_14

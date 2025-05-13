@@ -12,11 +12,11 @@ until ping -c1 8.8.8.8 &>/dev/null; do
   sleep 5
 done
 
+apt-get update && apt-get upgrade -y
+
 # install tools
 sudo apt-get install -y nmap net-tools unzip tree
 sudo apt-get install -y wget curl
-
-apt-get update && apt-get upgrade -y
 
 # install aws cli
 apt-get install -y awscli

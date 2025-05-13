@@ -26,7 +26,20 @@ def get_file_path(relative_path: str) -> str:
     """
     return os.path.abspath(os.path.join(relative_files_path, relative_path))
 
-# Flaga [ID=3] w pliku [\configs\firewall_config.txt]
-flag_id = "3"
-firewall_config_path = get_file_path("configs/firewall_config.txt")
-insert_flag_to_file(flag_id, firewall_config_path)
+# Lista flag związanych z EC2:Company_Archive
+flags = [
+    {"id": "2", "file": "index.html"},
+    {"id": "3", "file": "configs/firewall_config.txt"},
+    {"id": "4", "file": "configs/server_config.txt"},
+    {"id": "5", "file": "crypto_keys/ssh_public_key.txt"},
+    {"id": "6", "file": "logs/syslog/syslog.txt"},
+    {"id": "7", "file": "malware_signatures/yara_rule_trickbot.txt"},
+    {"id": "8", "file": "vulnerabilities/CVE-2021-34527.txt"},
+]
+
+# Iteracja po flagach i wstawianie ich do odpowiednich plików
+for flag in flags:
+    flag_id = flag["id"]
+    file_path = get_file_path(flag["file"])
+    print(f"Wstawianie flagi ID={flag_id} do pliku: {file_path}")
+    insert_flag_to_file(flag_id, file_path)

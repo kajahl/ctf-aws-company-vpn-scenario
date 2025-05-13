@@ -4,6 +4,7 @@ resource "aws_vpc" "external_vpc" {
 
 resource "aws_subnet" "external_subnet" {
   vpc_id                  = aws_vpc.external_vpc.id
+  availability_zone       = "us-east-1f"
   cidr_block              = "192.168.1.0/24"
   map_public_ip_on_launch = true
 }

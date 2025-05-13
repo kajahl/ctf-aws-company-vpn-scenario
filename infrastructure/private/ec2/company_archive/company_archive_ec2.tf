@@ -3,8 +3,7 @@ resource "aws_instance" "company_archive" {
   instance_type = var.instance_type
   subnet_id     = var.company_subnet_id
   security_groups = [
-    var.company_sg_id,
-    var.company_dev_sg_id
+    var.company_sg_id
   ]
   user_data = var.user_data
   key_name  = var.remote_key_name
@@ -15,6 +14,7 @@ resource "aws_instance" "company_archive" {
   }
 
   depends_on = [
-    var.bucket_id
+    var.bucket_id,
+    var.soc_key_s3_id
   ]
 }

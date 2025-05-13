@@ -5,6 +5,7 @@ resource "aws_vpc" "company_vpc" {
 
 resource "aws_subnet" "company_subnet" {
   vpc_id                  = aws_vpc.company_vpc.id
+  availability_zone       = "us-east-1f"
   cidr_block              = "10.0.1.0/24"
   map_public_ip_on_launch = false
 }

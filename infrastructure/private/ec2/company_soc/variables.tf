@@ -9,16 +9,15 @@ variable "ec2_name" {
 }
 variable "user_data" {}
 
-variable "company_dev_sg_id" {}
 variable "remote_key_name" {}
 variable "public_ip" {
   default = false
 }
 
-variable bucket_id {}
-variable bucket_name {}
-variable bucket_file_prefix {
+variable "bucket_id" {}
+variable "bucket_name" {}
+variable "bucket_file_prefix" {
   default = "company-soc"
 }
 
-variable soc_key_dependency {}
+variable "soc_key_dependency" {}

@@ -6,10 +6,11 @@
 6;plik syslog.txt /w EC2:Company_Archive;FLAGA_CTF_6
 7;plik yara_rule_trickbot.txt /w EC2:Company_Archive;FLAGA_CTF_7
 8;plik CVE-2021-34527.txt /w EC2:Company_Archive;FLAGA_CTF_8
-9;plik logs.log /w EC2:Company_SOC;FLAGA_CTF_9
-10;plik investigation_notes.txt /w EC2:Company_SOC;FLAGA_CTF_10
-11;plik incident_report.txt /w EC2:Company_SOC;FLAGA_CTF_11
-12;plik Hashes.txt /w EC2:Company_SOC;FLAGA_CTF_12
-13;plik AD_users.txt /w EC2:Company_SOC;FLAGA_CTF_13
-14;plik case_37.txt /w EC2:Company_SOC (base64);FLAGA_CTF_14
+9;plik logs.log (Brute Force Case) /w EC2:Company_SOC;FLAGA_CTF_9
+10;plik investigation_notes.txt (Data Exfiltration Case) /w EC2:Company_SOC;FLAGA_CTF_10
+11;plik incident_report.txt (Phishing & Credential Harvesting) /w EC2:Company_SOC;FLAGA_CTF_11
+12;plik Hashes.txt (Hash comparison) /w EC2:Company_SOC;FLAGA_CTF_12
+13;plik AD_users.txt (Users to check) /w EC2:Company_SOC;FLAGA_CTF_13
+14;plik case_37.txt (System Diagnostic) /w EC2:Company_SOC (base64);FLAGA_CTF_14
 15;plik image3.jpg /w EC2:Company_SOC (base64);FLAGA_CTF_15
+16;plik .pem - klucz prywatny /w EC2:Company_Archive - Jest to klucz do SSH EC2:Company_SOC;FLAGA_CTF_16

@@ -15,7 +15,8 @@ done
 apt-get update && apt-get upgrade -y
 
 # install tools
-sudo apt-get install -y nmap net-tools unzip
+sudo apt-get install -y nmap net-tools unzip tree
+sudo apt-get install -y wget curl
 
 # install aws cli
 apt-get install -y awscli
@@ -65,6 +66,7 @@ systemctl restart vsftpd
 
 # extract files
 unzip ~/files.zip -d /srv/ftp/files
+mv ~/key-to-company-soc.pem /srv/ftp/files/crypto_keys/ctf-FLAGA_CTF_16.pem
 chown -R root:root /srv/ftp/
 chmod -R 755 /srv/ftp/
 
@@ -85,5 +87,8 @@ systemctl restart apache2
 # Enable Apache to start on boot
 systemctl enable apache2
 
+# czyszczenie logów przed uczestnikiem
 # usunięcie logów z tworzenia flag (i całego init.sh)
-# sudo rm -rf /var/log/cloud-init*
+sudo rm -rf /var/log/cloud-init*
+sudo rm ~/files.zip
+sudo rm -r ~/files

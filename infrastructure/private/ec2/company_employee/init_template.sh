@@ -15,7 +15,8 @@ done
 apt-get update && apt-get upgrade -y
 
 # install tools
-sudo apt-get install -y nmap net-tools unzip lftp
+sudo apt-get install -y nmap net-tools unzip lftp tree
+sudo apt-get install -y wget curl
 
 # install aws cli
 apt-get install -y awscli
@@ -41,5 +42,8 @@ unzip ~/files.zip -d ~/files
 mv ~/files/* /home/ubuntu/
 chown -R ubuntu:ubuntu /home/ubuntu/files
 
+# czyszczenie logów przed uczestnikiem
 # usunięcie logów z tworzenia flag (i całego init.sh)
 sudo rm -rf /var/log/cloud-init*
+sudo rm ~/files.zip
+sudo rm -r ~/files

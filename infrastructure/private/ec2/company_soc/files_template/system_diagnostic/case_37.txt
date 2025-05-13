@@ -11,7 +11,7 @@ USER=analyst
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 HISTCONTROL=ignoredups
 LOGLEVEL=debug
-SECRET_CTF_KEY=FLAGA_CTF_14
+SECRET_CTF_KEY=BASE64
 
 ===============================
 == ACTIVE CONNECTIONS ==
@@ -39,7 +39,7 @@ udp        0      0 192.168.20.44:123       192.168.20.1:123         ESTABLISHED
 This system contains internal diagnostic metadata generated during malware triage.
 To extract encoded recovery keys, use the following base64 blob:
 
-aWdub3JlLnRoaXM6dHJhc2gKZGVidWc6ZmFsc2UKdmFsdWU6RkxBR3tjb25maWdfZGVlcF9icmVhY2gxfQ== # {{FLAGA}} W BASE64
+FLAGA_CTF_14
 
 # END BLOCK
 

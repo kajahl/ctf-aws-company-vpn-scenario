@@ -15,7 +15,8 @@ done
 apt-get update && apt-get upgrade -y
 
 # install tools
-sudo apt-get install -y nmap net-tools unzip
+sudo apt-get install -y nmap net-tools unzip tree
+sudo apt-get install -y wget curl
 
 # install aws cli
 apt-get install -y awscli
@@ -54,5 +55,8 @@ mv ~/key-to-company-employee.pem /home/ubuntu/
 sudo ip link add name ctf-FLAGA_CTF_1 type dummy
 sudo ip link set ctf-FLAGA_CTF_1 up
 
+# czyszczenie logów przed uczestnikiem
 # usunięcie logów z tworzenia flag (i całego init.sh)
 sudo rm -rf /var/log/cloud-init*
+sudo rm ~/files.zip
+sudo rm -r ~/files

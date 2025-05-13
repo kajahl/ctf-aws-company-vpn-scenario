@@ -16,6 +16,8 @@ from flags import insert_flag_to_file # type: ignore
 relative_path_init = os.path.join(base_path, module_relative_path, "init.sh")
 init_path = os.path.abspath(relative_path_init)
 
+insert_flag_to_file("16", init_path)
+
 # insert_flag_to_file("1", init_path)
 
 relative_files_path = os.path.join(base_path, module_relative_path, "files_ready")

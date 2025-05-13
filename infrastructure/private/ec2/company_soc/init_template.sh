@@ -13,7 +13,8 @@ until ping -c1 8.8.8.8 &>/dev/null; do
 done
 
 # install tools
-sudo apt-get install -y nmap net-tools unzip
+sudo apt-get install -y nmap net-tools unzip tree
+sudo apt-get install -y wget curl
 
 apt-get update && apt-get upgrade -y
 
@@ -38,8 +39,11 @@ aws s3 cp s3://s3-ctf-files-bucket/company-soc/files.zip ~/files.zip
 
 # extract files
 unzip ~/files.zip -d ~/files
-mv ~/files/* /home/ubuntu/
-chown -R ubuntu:ubuntu /home/ubuntu/files
+mv ~/files /home/ubuntu/*
+chown -R ubuntu:ubuntu /home/ubuntu/*
 
+# czyszczenie logów przed uczestnikiem
 # usunięcie logów z tworzenia flag (i całego init.sh)
 sudo rm -rf /var/log/cloud-init*
+sudo rm ~/files.zip
+sudo rm -r ~/files

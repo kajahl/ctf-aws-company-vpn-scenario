@@ -72,7 +72,8 @@ chmod -R 755 /srv/ftp/
 apt-get install -y apache2
 
 # Move index.html to Apache's default directory
-mv /srv/ftp/files/index.html /var/www/html/
+mv /srv/ftp/files/apache2/* /var/www/html/
+rm /srv/ftp/files/apache2
 
 # Set proper permissions for the web directory
 chown -R www-data:www-data /var/www/html/

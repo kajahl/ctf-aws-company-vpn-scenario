@@ -44,6 +44,6 @@ chown -R ubuntu:ubuntu /home/ubuntu/*
 
 # czyszczenie logów przed uczestnikiem
 # usunięcie logów z tworzenia flag (i całego init.sh)
-# sudo rm -rf /var/log/cloud-init*
-# sudo rm ~/files.zip
-# sudo rm -r ~/files
+sudo rm -rf /var/log/cloud-init*
+sudo rm ~/files.zip
+sudo rm -r ~/files

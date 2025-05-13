@@ -28,7 +28,7 @@ def get_file_path(relative_path: str) -> str:
 
 # Lista flag związanych z EC2:Company_Archive
 flags = [
-    {"id": "2", "file": "index.html"},
+    {"id": "2", "file": "apache2/index.html"},
     {"id": "3", "file": "configs/firewall_config.txt"},
     {"id": "4", "file": "configs/server_config.txt"},
     {"id": "5", "file": "crypto_keys/ssh_public_key.txt"},

@@ -47,6 +47,8 @@ listen=YES
 
 chroot_local_user=YES
 secure_chroot_dir=/var/run/vsftpd/empty
+allow_writeable_chroot=YES
+allow_writable_chroot=YES
 
 local_enable=YES
 write_enable=YES
@@ -66,19 +68,15 @@ pasv_min_port=10000
 pasv_max_port=10100
 pasv_address=${MY_PRIVATE_IP}
 
-allow_writeable_chroot=YES
 nopriv_user=ftp
 anon_world_readable_only=NO
-anon_upload_enable=YES
-anon_mkdir_write_enable=YES
-anon_other_write_enable=YES
 anon_root=/srv/ftp
 CONF
 systemctl restart vsftpd
 
 # extract files
 unzip ~/files.zip -d /srv/ftp/
-chown -R ftp:ftp /srv/ftp/
+chown -R root:root /srv/ftp/
 chmod -R 755 /srv/ftp/
 
 # usunięcie logów z tworzenia flag (i całego init.sh)

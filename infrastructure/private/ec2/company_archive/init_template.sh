@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NEW_HOSTNAME="compay-archive"
+NEW_HOSTNAME="company-archive"
 hostnamectl set-hostname "$NEW_HOSTNAME"
 
 if ! grep -q "$NEW_HOSTNAME" /etc/hosts; then
@@ -60,15 +60,13 @@ pasv_enable=YES
 pasv_min_port=10000
 pasv_max_port=10100
 pasv_address=${MY_PRIVATE_IP}
-local_root=/home/ftp/files
 CONF
 systemctl restart vsftpd
 
 # extract files
-unzip ~/files.zip -d ~/files
-mv ~/files/* /home/ftp/files
-chown -R ftp:ftp /home/ftp/files
-chmod -R 755 /home/ftp/files
+unzip ~/files.zip -d /srv/ftp/
+chown -R ftp:ftp /srv/ftp/
+chmod -R 755 /srv/ftp/
 
 # usunięcie logów z tworzenia flag (i całego init.sh)
 # sudo rm -rf /var/log/cloud-init*

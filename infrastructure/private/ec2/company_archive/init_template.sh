@@ -41,7 +41,7 @@ aws s3 cp s3://s3-ctf-files-bucket/keys/soc-key.pem ~/key-to-company-soc.pem
 
 # vsftpd
 apt-get install -y vsftpd
-MY_PUBLIC_IP=$(curl -s http://169.254.169.254/latest/meta-data/public-ipv4)
+MY_PRIVATE_IP=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
 cat <<CONF > /etc/vsftpd.conf
 listen=YES
 anonymous_enable=YES
@@ -59,7 +59,7 @@ rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
 pasv_enable=YES
 pasv_min_port=10000
 pasv_max_port=10100
-pasv_address=${MY_PUBLIC_IP}
+pasv_address=${MY_PRIVATE_IP}
 local_root=/home/ftp/files
 CONF
 systemctl restart vsftpd

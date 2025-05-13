@@ -5,6 +5,14 @@ resource "aws_security_group" "company_sg" {
 
   # Ingress rules (ruch przychodzący)
 
+  # HTTP (port 80)
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   # SSH (Secure Shell) - dostęp do instancji EC2 w VPC
   ingress {
     from_port   = 22

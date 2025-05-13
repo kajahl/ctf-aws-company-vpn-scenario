@@ -1,0 +1,50 @@
+=== INCIDENT REPORT ===  
+CASE ID: SOC-PH-0129  
+Date: 2025-05-09
+Ctf: {{FLAGA}}
+Prepared by: M. Zielińska  
+Classification: Phishing – Credential Compromise
+
+---
+
+Summary:
+User a.nowak received a phishing email masquerading as a Microsoft security notification. The email linked to a fake login portal hosted at login-micr0s0ft-security.com. The user entered their credentials, which were later used from a Russian IP address to access webmail briefly.
+
+---
+
+Timeline:
+
+• 08:44 – DNS and HTTP requests to phishing site  
+• 08:44:38 – POST request with user credentials  
+• 09:13 – Attacker logs in from 185.112.145.88  
+• 09:14 – Webmail session initiated, inbox accessed  
+• 09:15 – Account flagged and session terminated  
+• 09:16 – Alert escalated to SOC Tier 2  
+• 09:20 – Account locked
+
+---
+
+Impact:
+- Brief access to mailbox (inbox/archive)  
+- No evidence of email forwarding or download  
+- First known phishing success using this domain  
+- No access to internal systems beyond mail
+
+---
+
+Recommendations:
+1. Company-wide phishing simulation and awareness campaign  
+2. Block future access to lookalike domains via DNS/proxy  
+3. Submit domain and IOCs to threat intel feeds  
+4. Review anti-phishing filtering gaps  
+5. Expand phishing detection rules for POST pattern matches
+6. Check if the flag is correct
+
+---
+
+Status:
+🟠 Closed — Contained  
+User reset, domain reported, monitoring enabled
+
+Signature:  
+M. Zielińska — SOC Tier 2 Analyst

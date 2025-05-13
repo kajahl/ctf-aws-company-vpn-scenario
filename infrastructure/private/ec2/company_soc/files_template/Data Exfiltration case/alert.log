@@ -1,0 +1,9 @@
+[2025-05-10 23:48:05] [ALERT] Unusual SCP activity detected
+  → Source IP: 192.168.56.42
+  → Destination IP: 51.91.132.77 (external)
+  → Port: 22
+  → File size: ~1.2GB
+  → Triggered rule: SCP Data Exfiltration Threshold (SID: 200134)
+
+[2025-05-10 23:48:07] [ACTION] Alert forwarded to SOC analyst queue
+[2025-05-10 23:48:15] [CASE CREATED] SOC-DX-0042

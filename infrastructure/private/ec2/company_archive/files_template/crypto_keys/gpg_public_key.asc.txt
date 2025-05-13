@@ -1,0 +1,10 @@
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1
+
+mQENBFXOQRoBCADhQLmKhjxU/Nl9v7i/fn3eL9yO3pCz2RgWswvfeNqz2nkE7Zv/
+FdM8mJ6RHxE3nVunh5w3iXws3rX9tstDjjkQtcg3jAKlAfRYzCrLg5PnOHvEY4me
+gZonG5y5HiFuYGBbhc2PhAsGFpBzwEpt2tTtWh7n3jbq2kwQrbp8fgKfcptHZVVF
+QLxez9S5RzjQusXlRHgDcv1mShj2Qelc2gT4d2gnbZkbgzm9opq5ZttD0hjsRjF/
+ZWu2fPDB4lXs3yMbkF31Bz7+ZOdK87QsEzQUgANECrA6AkcLgH7eCTiKvv7hn8Eq
+F72BbdoRAz0OmO1rFgeeyxxPHnlQnXlwkcn3s+fvJsmz2GHVxXRPZZ9qDmnws=
+-----END PGP PUBLIC KEY BLOCK-----

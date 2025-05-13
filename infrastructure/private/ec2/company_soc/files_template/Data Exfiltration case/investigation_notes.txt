@@ -1,0 +1,32 @@
+CASE: SOC-DX-0042  
+Date: 2025-05-10  
+Analyst: K. Marciniak  
+
+Initial Detection:
+- SCP data transfer to external IP (non-whitelisted)  
+- Total size: ~1.2 GB  
+- Source: internal host 192.168.56.42  
+- User: j.kowalski (??)
+
+Checks:
+✓ User login confirmed at 23:44  
+✓ Downloaded archive: client_data.zip (known internal file)  
+✓ File transferred via SCP/SFTP to IP 51.91.132.77  
+✗ No business justification found (checked ticketing system)  
+✓ External IP not owned by company  
+✗ No audit trail of prior approval  
+
+→ Open question: was this malicious, or negligence?
+→ Does the contestant know the flag?  
+→ Is j.kowalski's account compromised? Insider?  
+
+Next steps:
+[ ] Contact j.kowalski for justification  
+[ ] Verify IP reputation of 51.91.132.77  
+[ ] Isolate host for forensic imaging  
+[ ] Review prior access to /srv/backups/
+
+Open answers:
+→ Yes, it is here: {{FLAGA}}
+
+Note: similar transfer seen last week — SOC-DX-0039  

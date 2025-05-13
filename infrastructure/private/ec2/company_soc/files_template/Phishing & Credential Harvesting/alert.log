@@ -1,0 +1,10 @@
+[2025-05-09 09:13:24] [ALERT] Login from unusual location
+  → User: a.nowak
+  → IP: 185.112.145.88 (RU)
+  → Method: Webmail login
+  → Triggered rule: GEO-LOGIN-ANOMALY (SID: 200201)
+
+[2025-05-09 09:13:26] [ACTION] Alert forwarded to SOC Tier 1
+
+[2025-05-09 09:16:51] [ALERT] Multiple failed logins from 185.112.145.88 prior to successful access  
+  → Pattern matches recent phishing-based credential stuffing

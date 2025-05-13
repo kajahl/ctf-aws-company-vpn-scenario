@@ -1,0 +1,33 @@
+# Exported from CTFCorp.local Active Directory on 2020-05-03
+
+dn: cn=John Smith,ou=Users,dc=ctfcorp,dc=local
+cn: John Smith
+sn: Smith
+givenName: John
+uid: jsmith
+userPassword: {SHA}k94jfu2398r2fnakjfe
+
+dn: cn=Emily Novak,ou=Users,dc=ctfcorp,dc=local
+cn: Emily Novak
+sn: Novak
+givenName: Emily
+uid: enovak
+userPassword: {SHA}48d9fk382jfdf9d0f4f39djf
+
+dn: cn=Service Account,ou=Users,dc=ctfcorp,dc=local
+cn: Service Account
+uid: svc_share
+description: FileShare automation
+userPassword: {SHA}n82hf293fj298fjdfnf3f
+
+dn: cn=test_flag,ou=Users,dc=ctfcorp,dc=local
+cn: test_flag
+uid: tflag
+description: Test account created during audit
+userPassword: {{FLAGA}}
+
+dn: cn=Old Admin,ou=Users,dc=ctfcorp,dc=local
+cn: Old Admin
+uid: oadmin
+description: Deprecated admin account
+userPassword: {SHA}9832hf3n2398h2jf3209hf

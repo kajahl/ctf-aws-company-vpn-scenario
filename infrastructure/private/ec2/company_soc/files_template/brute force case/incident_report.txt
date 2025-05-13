@@ -1,0 +1,62 @@
+=== INCIDENT REPORT ===  
+CASE ID: SOC-BF-0081  
+Date: 2025-05-11  
+Prepared by: J. Nowak  
+Classification: Internal Threat (suspected)
+
+---
+
+Summary:
+At 02:14 on 2025-05-11, automated detection systems flagged repeated failed login attempts on the FTP service hosted at 192.168.56.20. A total of 52 login attempts were observed from IP address 192.168.56.101 over a span of ~1 minute. The activity matched the signature for brute force behavior.
+
+---
+
+Timeline (UTC+2):
+
+• 02:14:22 – Initial FTP connection from 192.168.56.101  
+• 02:14:23–02:14:31 – Multiple failed login attempts using common usernames  
+• 02:14:56 – vsftpd logs indicate login failure threshold exceeded  
+• 02:15:01 – IP 192.168.56.101 automatically banned by fail2ban  
+• 02:15:03 – auditd logs confirm anomaly event  
+• 02:15:04 – Alert registered as SOC-BF-0081
+
+---
+
+Affected Systems:
+- soc-ftp-server (192.168.56.20)  
+- No evidence of successful authentication  
+- No files were accessed or exfiltrated (as per current evidence)
+
+---
+
+Attack Vector:
+- Brute-force login attempts over FTP (port 21)  
+- Usernames used: admin, root, guest, analyst, etc.  
+- NOTE: The username "analyst" suggests possible internal recon or leaked credential knowledge
+
+---
+
+Root Cause:
+- FTP service was publicly accessible within internal subnet  
+- Lack of login attempt rate limiting (mitigated post-incident)
+
+---
+
+Recommendations:
+1. Review and restrict access to FTP service (internal use only)
+2. Enforce strong credential policies and remove default/unused accounts
+3. Implement stricter brute-force detection thresholds
+4. Audit existence and usage of account: analyst
+5. Investigate whether similar behavior occurred from other IPs in 192.168.56.0/24
+
+---
+
+Status:
+Under Review  
+Awaiting deeper correlation with historical cases (e.g. SOC-BF-0079)  
+Next review scheduled: 2025-05-12 @ 09:00
+
+---
+
+Signature:  
+J. Nowak — Security Analyst, Level II

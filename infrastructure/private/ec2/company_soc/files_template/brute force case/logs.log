@@ -1,0 +1,15 @@
+May 11 02:14:22 soc-ftp-server vsftpd[20122]: CONNECT: Client "192.168.56.101"
+May 11 02:14:22 soc-ftp-server vsftpd[20122]: FTP session opened
+May 11 02:14:23 soc-ftp-server vsftpd[20122]: FAIL LOGIN: Client "192.168.56.101", anon password used
+May 11 02:14:24 soc-ftp-server vsftpd[20122]: USER admin - Login incorrect (from 192.168.56.101)
+May 11 02:14:25 soc-ftp-server vsftpd[20122]: USER root - Login incorrect (from 192.168.56.101)
+May 11 02:14:26 soc-ftp-server vsftpd[20122]: USER guest - Login incorrect (from 192.168.56.101)
+May 11 02:14:27 soc-ftp-server vsftpd[20122]: USER test - Login incorrect (from 192.168.56.101)
+May 11 02:14:28 soc-ftp-server vsftpd[20122]: USER user - Login incorrect (from 192.168.56.101)
+May 11 02:14:29 soc-ftp-server vsftpd[20122]: USER analyst - Login incorrect (from 192.168.56.101)
+May 11 02:14:31 soc-ftp-server vsflag[20122]: Maximum number of login failures reached ({{FLAGA}})
+May 11 02:14:31 soc-ftp-server vsftpd[20122]: Connection refused for client "192.168.56.101"
+
+May 11 02:15:01 soc-ftp-server fail2ban.actions[3025]: WARNING [vsftpd] Ban 192.168.56.101
+May 11 02:15:03 soc-ftp-server auditd[2224]: ANOMALY_ALERT user=root exe=/usr/sbin/vsftpd reason=excessive_failed_logins
+May 11 02:15:04 soc-ftp-server logger: [SOC-ALERT] CASE SOC-BF-0081 registered by detection engine

@@ -1,0 +1,18 @@
+[2025-05-11 02:14:23] [ALERT] Suspicious activity detected from IP: 192.168.56.101
+  -> Multiple failed login attempts detected on port 21 (FTP)
+  -> Count: 52 attempts in 1 minute
+  -> Triggered rule: FTP Brute Force Detection (SID:1000453)
+
+[2025-05-11 02:14:24] [DETAIL] FTP login attempt - user: admin from 192.168.56.101 - FAILED
+[2025-05-11 02:14:25] [DETAIL] FTP login attempt - user: root from 192.168.56.101 - FAILED
+[2025-05-11 02:14:26] [DETAIL] FTP login attempt - user: guest from 192.168.56.101 - FAILED
+[2025-05-11 02:14:27] [DETAIL] FTP login attempt - user: test from 192.168.56.101 - FAILED
+[2025-05-11 02:14:28] [DETAIL] FTP login attempt - user: user from 192.168.56.101 - FAILED
+[2025-05-11 02:14:29] [DETAIL] FTP login attempt - user: analyst from 192.168.56.101 - FAILED
+
+[2025-05-11 02:15:01] [ALERT] Rule threshold reached. FTP brute force likely.
+  -> Source IP: 192.168.56.101
+  -> Destination: 192.168.56.20:21
+  -> Recommended action: Block IP or initiate investigation.
+
+[2025-05-11 02:15:03] [ACTION] Logged to case management system as CASE-ID: SOC-BF-0081

@@ -1,0 +1,31 @@
+CASE: SOC-PH-0129  
+Date: 2025-05-09  
+Analyst: M. Zielińska  
+
+Initial Trigger:
+- Unusual login from IP 185.112.145.88 (Russia)
+- Belongs to no known VPNs or whitelisted providers
+- Followed by brief session access to inbox/archive
+
+Findings:
+✓ DNS logs show access to suspicious domain: login-micr0s0ft-security.com  
+✓ User submitted credentials via POST (confirmed via proxy logs)  
+✓ Email headers spoof Microsoft domain — clear phishing  
+✓ Email not caught by anti-spam filters (new domain?)
+
+Actions Taken:
+✓ User a.nowak account locked  
+✓ SOC added IOC to detection engine  
+✓ Domain reported to registrar (pending takedown)  
+✓ Proxy rule updated to block *.micr0s0ft-security.com
+
+To Investigate:
+[ ] Did attacker forward or download any messages?  
+[ ] Was this part of a wider phishing campaign?  
+[ ] Who else received similar e-mail?
+
+Note:
+→ Domain uses typosquatting (0 instead of "o")  
+→ Second domain fonts-banking.net also used in phishing page assets
+
+- MZ

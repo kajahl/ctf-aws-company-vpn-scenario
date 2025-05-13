@@ -1,0 +1,33 @@
+Case ID: USB-2019-084
+Date Opened: 2019-10-18
+Analyst: K. Zalewski
+
+Incident Summary:
+A USB device found in the company parking lot was plugged into a workstation by an unaware employee.
+The device executed an unknown binary immediately after mounting, suggesting autorun-style exploitation.
+Initial infection appears to have established persistence via registry modification and dropped multiple payloads.
+
+Recovered Samples (hashes):
+
+sample1.exe
+MD5:     b6a8b08fcf60df1c3aa5e923b3b0c3de
+SHA1:    3fcba2c38a437e3bb9d8122a0b38fd847f63bd6f
+SHA256:  2d6c3b1fef6a5e4f7efb32d11c1dc6f940e6c7d3d1999af35c643b5bfa1efcd1
+
+persistence.dll
+MD5:     6c1c97c07de0cc7ea33bb0e68a14a768
+SHA1:    94f4d98480f90ba1a64989ae4c2d1f701d9e3073
+SHA256:  d1f1fd7b58aa396f6b7f131d1d3b1b6bdbb46f7f23851a8f5ed71209e8945f1b
+
+stage2_payload.dat
+MD5:     1059a4f7b31d4dbacb2f8e4ad99c1904
+SHA1:    3a08f299c769a3f4089f7d89ef39b3f3ef43f4a7
+SHA256:  FLAG{{FLAGA}}   
+
+Notes:
+- No internet access was needed, communication over SMB.
+- The stage2_payload.dat was executed via rundll32 loading persistence.dll
+- Registry changes under: HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+- The USB device contained unrelated family photos (excluded from analysis).
+
+Case closed: 2019-10-21

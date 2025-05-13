@@ -1,0 +1,9 @@
+SSL/TLS podatności związane z słabymi zestawami szyfrującymi:
+
+- SSLv2 i SSLv3: Przestarzałe protokoły SSL/TLS, które należy wyłączyć.
+- RC4: Algorytm szyfrowania, który został uznany za niebezpieczny i podatny na ataki.
+- DES i 3DES: Algorytmy szyfrujące, które są uznawane za niebezpieczne i powinny być wyłączone w nowoczesnych aplikacjach.
+
+Zalecenia:
+- Włączyć tylko TLS 1.2 i wyższe wersje.
+- Użyć bezpiecznych zestawów szyfrujących (AES, ECDHE).

@@ -1,0 +1,11 @@
+May 09 08:44:12 dnslog: Query from 10.0.4.23: login-micr0s0ft-security[.]com  
+May 09 08:44:15 dnslog: Query from 10.0.4.23: cdn.fonts-banking[.]net  
+May 09 08:44:32 proxylog: GET http://login-micr0s0ft-security[.]com/login.php  
+May 09 08:44:38 proxylog: POST credentials to http://login-micr0s0ft-security[.]com/login.php
+
+May 09 09:13:24 authlog: Login successful – a.nowak from 185.112.145.88  
+May 09 09:13:26 authlog: Session initiated (Webmail)
+May 09 09:14:33 authlog: Access to folder: inbox/archive  
+May 09 09:14:52 authlog: Session ended
+
+May 09 09:20:01 authlog: Login blocked – policy violation GEO

@@ -1,0 +1,20 @@
+# Konfiguracja zapory sieciowej dla ochrony sieci firmowej
+# Filtracja pakietów wchodzących i wychodzących na podstawie adresów IP oraz portów
+
+# Blokowanie całego ruchu przychodzącego z nieznanych adresów IP
+iptables -A INPUT -s 0.0.0.0/0 -j DROP
+
+# Dozwolony ruch przychodzący tylko na port 22 (SSH) i 80 (HTTP)
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+
+# Dozwolony ruch wychodzący na porty 80 i 443
+iptables -A OUTPUT -p tcp --dport 80 -j ACCEPT
+iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT
+
+# Logowanie  dostępu flag 
+iptables -A INPUT -j LOG --log-prefix "FLAGA_CTF_3"
+
+# Logowanie nieautoryzowanych prób dostępu
+iptables -A INPUT -j LOG --log-prefix "Firewall-Drop: "
+

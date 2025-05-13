@@ -1,0 +1,31 @@
+# Server configuration - last updated: 2019-06-14
+# Maintained by: admin_team
+
+[network]
+hostname = srv-web01.internal.ctfcorp.local
+ip_address = 192.168.10.15
+port = 8080
+ssl_enabled = true
+
+[logging]
+log_path = /var/log/ctfcorp/
+log_level = INFO
+rotate_logs = yes
+retention_days = 30
+
+[security]
+enable_firewall = true
+allowed_ips = 192.168.10.0/24, 10.0.0.0/8
+blocked_ports = 23, 445, 3389
+
+# Note: Disable legacy admin panel on next update
+# admin_panel_url = /admin/legacy/
+# removed in v2.3 due to exposure
+
+[services]
+enable_api = true
+api_key = REDACTED
+ctf_flags = ["{{FLAGA}}", "LEGACY_COMPAT"]
+
+# Backup target path (deprecated in 2020)
+# /mnt/backups/server01/

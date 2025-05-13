@@ -1,0 +1,7 @@
+May 10 23:44:50 soc-core sshd[2133]: Accepted password for j.kowalski from 192.168.56.42 port 54831 ssh2
+May 10 23:45:03 soc-core sshd[2133]: subsystem request for sftp by user j.kowalski
+May 10 23:45:15 soc-core sftp-server[2135]: open "/srv/backups/client_data.zip"
+May 10 23:45:20 soc-core sftp-server[2135]: sent 1243981132 bytes in 31 seconds
+
+May 10 23:48:06 firewall[fwmon]: OUTBOUND TRANSFER detected from 192.168.56.42 to 51.91.132.77 on port 22
+May 10 23:48:06 firewall[fwmon]: TRANSFER SIZE: 1.24GB — THRESHOLD EXCEEDED

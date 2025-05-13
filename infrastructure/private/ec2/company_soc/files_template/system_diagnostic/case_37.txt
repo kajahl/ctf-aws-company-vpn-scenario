@@ -1,0 +1,56 @@
+# System Diagnostic Dump - Generated: 2020-11-22 03:15:04
+# Machine ID: WS-CTF-013
+# Analyst: J. Tomczak
+
+===============================
+== ENVIRONMENT VARIABLES ==
+===============================
+
+HOSTNAME=ws-ctf-013
+USER=analyst
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+HISTCONTROL=ignoredups
+LOGLEVEL=debug
+SECRET_API_KEY=RkxBR3tzZWNyZXRfZW52X2R1bXAzZF9kYXRhfQ==  # {{FLAGA}} W BASE64
+
+===============================
+== ACTIVE CONNECTIONS ==
+===============================
+
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 192.168.20.44:22        10.0.0.14:58022          ESTABLISHED
+tcp        0      0 127.0.0.1:6379          127.0.0.1:46200          TIME_WAIT
+udp        0      0 192.168.20.44:123       192.168.20.1:123         ESTABLISHED
+
+===============================
+== SYSTEM NOTES ==
+===============================
+
+- User 'analyst' has sudo privileges.
+- Old SSH keys still present in /home/analyst/.ssh (rotate?)
+- Backup script references an unknown host: `old-vault.internal.ctfcorp.local`
+- Disk usage warning on /mnt/data (91% used)
+
+===============================
+== CUSTOM METADATA ==
+===============================
+
+# BEGIN BLOCK
+This system contains internal diagnostic metadata generated during malware triage.
+To extract encoded recovery keys, use the following base64 blob:
+
+aWdub3JlLnRoaXM6dHJhc2gKZGVidWc6ZmFsc2UKdmFsdWU6RkxBR3tjb25maWdfZGVlcF9icmVhY2gxfQ== # {{FLAGA}} W BASE64
+
+# END BLOCK
+
+===============================
+== HISTORICAL ENTRY ==
+===============================
+
+[2019-12-01 14:22:11] /opt/toolkit/vulnscan -p all -t 10.0.0.0/8
+[2019-12-01 14:22:45] echo "ZWNobyAiUkxBIFRlc3QgY29tcGxldGVkIg==" | base64 -d
+[2019-12-01 14:23:01] curl http://192.168.22.9/installer.sh | bash
+
+===============================
+== END OF DUMP ==
+===============================

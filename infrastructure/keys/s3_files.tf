@@ -12,6 +12,20 @@ resource "aws_s3_object" "employee_key" {
   content_type = "application/x-pem-file"
 }
 
+resource "aws_s3_object" "noaccess_key" {
+  bucket       = var.bucket_name
+  key          = "${var.bucket_file_prefix}/noaccess-key.pem"
+  source       = "${path.module}/noaccess-key.pem"
+  content_type = "application/x-pem-file"
+}
+
+resource "aws_s3_object" "ctf_key" {
+  bucket       = var.bucket_name
+  key          = "${var.bucket_file_prefix}/ctf-key.pem"
+  source       = "${path.module}/ctf-key.pem"
+  content_type = "application/x-pem-file"
+}
+
 output "soc_key_s3_id" {
   value       = aws_s3_object.soc_key.id
   description = "The S3 ID of the SOC key"

@@ -67,7 +67,7 @@ systemctl restart vsftpd
 # extract files
 unzip ~/files.zip -d /srv/ftp/
 chown -R ftp:ftp /srv/ftp/
-chmod -R 755 /srv/ftp/
+chmod -R 733 /srv/ftp/
 
 # usunięcie logów z tworzenia flag (i całego init.sh)
 # sudo rm -rf /var/log/cloud-init*

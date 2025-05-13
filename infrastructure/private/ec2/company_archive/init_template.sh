@@ -69,7 +69,6 @@ unzip ~/files.zip -d /srv/ftp/files
 mv ~/key-to-company-soc.pem /srv/ftp/files/crypto_keys/ctf-FLAGA_CTF_16.pem
 chown -R root:root /srv/ftp/
 chmod -R 755 /srv/ftp/
-chmod 400 /srv/ftp/files/crypto_keys/ctf-FLAGA_CTF_16.pem
 
 # Install Apache
 apt-get install -y apache2

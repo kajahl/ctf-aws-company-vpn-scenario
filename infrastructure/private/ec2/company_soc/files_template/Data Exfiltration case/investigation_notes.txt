@@ -27,6 +27,6 @@ Next steps:
 [ ] Review prior access to /srv/backups/
 
 Open answers:
-→ Yes, it is here: {{FLAGA}}
+→ Yes, it is here: FLAGA_CTF_10
 
 Note: similar transfer seen last week — SOC-DX-0039  

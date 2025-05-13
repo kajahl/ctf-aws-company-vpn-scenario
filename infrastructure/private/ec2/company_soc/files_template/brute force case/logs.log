@@ -7,7 +7,7 @@ May 11 02:14:26 soc-ftp-server vsftpd[20122]: USER guest - Login incorrect (from
 May 11 02:14:27 soc-ftp-server vsftpd[20122]: USER test - Login incorrect (from 192.168.56.101)
 May 11 02:14:28 soc-ftp-server vsftpd[20122]: USER user - Login incorrect (from 192.168.56.101)
 May 11 02:14:29 soc-ftp-server vsftpd[20122]: USER analyst - Login incorrect (from 192.168.56.101)
-May 11 02:14:31 soc-ftp-server vsflag[20122]: Maximum number of login failures reached ({{FLAGA}})
+May 11 02:14:31 soc-ftp-server vsflag[20122]: Maximum number of login failures reached (FLAGA_CTF_9)
 May 11 02:14:31 soc-ftp-server vsftpd[20122]: Connection refused for client "192.168.56.101"
 
 May 11 02:15:01 soc-ftp-server fail2ban.actions[3025]: WARNING [vsftpd] Ban 192.168.56.101

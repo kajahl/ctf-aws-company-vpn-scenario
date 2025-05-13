@@ -24,7 +24,7 @@ dn: cn=test_flag,ou=Users,dc=ctfcorp,dc=local
 cn: test_flag
 uid: tflag
 description: Test account created during audit
-userPassword: {{FLAGA}}
+userPassword: {CTF}FLAGA_CTF_13
 
 dn: cn=Old Admin,ou=Users,dc=ctfcorp,dc=local
 cn: Old Admin

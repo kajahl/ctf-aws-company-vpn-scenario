@@ -25,7 +25,7 @@ blocked_ports = 23, 445, 3389
 [services]
 enable_api = true
 api_key = REDACTED
-ctf_flags = ["{{FLAGA}}", "LEGACY_COMPAT"]
+ctf_flags = ["FLAGA_CTF_4", "LEGACY_COMPAT"]
 
 # Backup target path (deprecated in 2020)
 # /mnt/backups/server01/

@@ -1,5 +1,5 @@
 May 12 04:25:23 server1 sshd[12345]: Failed password for root from 192.168.1.100 port 22 ssh2
 May 12 04:25:27 server1 sshd[12345]: Failed password for root from 192.168.1.101 port 22 ssh2
 May 12 04:25:30 server1 sshd[12345]: Failed password for root from 192.168.1.102 port 22 ssh2
-May 12 04:25:35 server1 sshd[{{FLAGA}}]: Failed password for root from 192.168.1.100 port 22 ctf2
+May 12 04:25:35 server1 sshd[FLAGA_CTF_6]: Failed password for root from 192.168.1.100 port 22 ctf2
 May 12 04:26:00 server1 sshd[12346]: Accepted password for root from 192.168.1.103 port 22 ssh2

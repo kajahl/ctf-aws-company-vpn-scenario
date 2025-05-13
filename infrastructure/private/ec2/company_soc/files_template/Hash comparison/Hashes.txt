@@ -22,7 +22,7 @@ SHA256:  d1f1fd7b58aa396f6b7f131d1d3b1b6bdbb46f7f23851a8f5ed71209e8945f1b
 stage2_payload.dat
 MD5:     1059a4f7b31d4dbacb2f8e4ad99c1904
 SHA1:    3a08f299c769a3f4089f7d89ef39b3f3ef43f4a7
-SHA256:  FLAG{{FLAGA}}   
+SHA256:  CTF{{FLAGA_CTF_12}}   
 
 Notes:
 - No internet access was needed, communication over SMB.

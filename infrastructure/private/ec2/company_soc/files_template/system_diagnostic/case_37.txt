@@ -11,7 +11,7 @@ USER=analyst
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 HISTCONTROL=ignoredups
 LOGLEVEL=debug
-SECRET_API_KEY=RkxBR3tzZWNyZXRfZW52X2R1bXAzZF9kYXRhfQ==  # {{FLAGA}} W BASE64
+SECRET_CTF_KEY=FLAGA_CTF_14
 
 ===============================
 == ACTIVE CONNECTIONS ==

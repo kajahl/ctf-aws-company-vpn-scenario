@@ -12,7 +12,7 @@ iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 iptables -A OUTPUT -p tcp --dport 80 -j ACCEPT
 iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT
 
-# Logowanie  dostępu flag 
+# Dozwolony ruch dla flag
 iptables -A INPUT -j LOG --log-prefix "FLAGA_CTF_3"
 
 # Logowanie nieautoryzowanych prób dostępu

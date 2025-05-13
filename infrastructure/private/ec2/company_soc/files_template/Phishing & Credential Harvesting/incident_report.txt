@@ -1,7 +1,7 @@
 === INCIDENT REPORT ===  
 CASE ID: SOC-PH-0129  
 Date: 2025-05-09
-Ctf: {{FLAGA}}
+Ctf: FLAGA_CTF_11
 Prepared by: M. Zielińska  
 Classification: Phishing – Credential Compromise
 

@@ -64,9 +64,25 @@ CONF
 systemctl restart vsftpd
 
 # extract files
-unzip ~/files.zip -d /srv/ftp/
+unzip ~/files.zip -d /srv/ftp/files
 chown -R root:root /srv/ftp/
 chmod -R 755 /srv/ftp/
+
+# Install Apache
+apt-get install -y apache2
+
+# Move index.html to Apache's default directory
+mv /srv/ftp/files/index.html /var/www/html/
+
+# Set proper permissions for the web directory
+chown -R www-data:www-data /var/www/html/
+chmod -R 755 /var/www/html/
+
+# Restart Apache to apply changes
+systemctl restart apache2
+
+# Enable Apache to start on boot
+systemctl enable apache2
 
 # usunięcie logów z tworzenia flag (i całego init.sh)
 # sudo rm -rf /var/log/cloud-init*

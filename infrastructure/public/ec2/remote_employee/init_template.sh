@@ -43,12 +43,12 @@ aws s3 cp s3://s3-ctf-files-bucket/keys/employee-key.pem ~/key-to-company-employ
 # extract files
 unzip ~/files.zip -d ~/files
 mv ~/files/* /home/ubuntu/
-chown -R ubuntu:ubuntu /home/ubuntu/files
+chown -R ubuntu:ubuntu /home/ubuntu/*
 
 # move key
 chown ubuntu:ubuntu ~/key-to-company-employee.pem
 chmod 400 ~/key-to-company-employee.pem
-mv ~/key-to-company-employee.pem /home/ubuntu/
+mv ~/key-to-company-employee.pem /home/ubuntu/firmowe/klucz.pem
 
 # flagi
 

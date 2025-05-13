@@ -1,0 +1,6 @@
+- Raport z hashy wrzucić do JIRA, a nie Slack – Aga naciska, żeby wszystko było udokumentowane
+- Nie ustawiać spotkania z IR na środę rano – Kasia ma call z CERT-em. Czwartek po 14:00 powinien przejść
+- Zaszyfrować klucz do firmowego ssh
+- Przed odpaleniem tego powershella z pendrive zrobić snapshot VM-ki!! (Monika ostrzegała, że ktoś raz przez to uwalił testówkę)
+- Umówić spotkanie ze znajomymi z pracy, bilard/kręgle?
+- Ugotować bigos według przepisu

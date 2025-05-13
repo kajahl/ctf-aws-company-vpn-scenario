@@ -1,0 +1,34 @@
+FAKTURA VAT NR: FA-2024-0483
+
+Sprzedawca:
+NetSol Technologies Sp. z o.o.
+ul. Krzemowa 14
+00-123 Warszawa
+NIP: 525-26-78-931
+REGON: 367834209
+
+Nabywca:
+INTELOGIC Systems s.c.
+ul. Żelazna 45/2
+00-866 Warszawa
+NIP: 113-29-48-673
+
+Data wystawienia: 2024-12-08
+Data sprzedaży: 2024-12-08
+Termin płatności: 2024-12-15
+Sposób płatności: przelew bankowy
+Numer konta: 12 1140 2004 0000 3502 4321 9876
+
+Lp. | Nazwa towaru/usługi        | Ilość | Jm | Cena netto | VAT | Wartość brutto
+----------------------------------------------------------------------------------
+1   | Konsultacje IT             |  10   | h  | 200,00 PLN | 23% | 2 460,00 PLN
+2   | Pakiet zabezpieczeń VPS    |   1   | szt| 950,00 PLN | 23% | 1 168,50 PLN
+
+Razem netto:                    2 950,00 PLN
+Podatek VAT (23%):               678,50 PLN
+RAZEM DO ZAPŁATY:              3 628,50 PLN
+
+Uwagi:
+Dziękujemy za współpracę. W przypadku pytań prosimy o kontakt z działem księgowości.
+
+Wystawił: K. Nowak

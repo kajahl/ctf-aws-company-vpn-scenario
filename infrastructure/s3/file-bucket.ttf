@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "s3-ctf-files-bucket"
+  bucket = "s3-ctf-files-bucket-UNIQUE_ID"
 
   tags = {
     Name        = "CTF Files"

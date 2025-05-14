@@ -35,10 +35,10 @@ output = json
 EOL
 
 # s3-bucket file structure
-aws s3 cp s3://s3-ctf-files-bucket/company-archive/files.zip ~/files.zip
+aws s3 cp s3://s3-ctf-files-bucket-UNIQUE_ID/company-archive/files.zip ~/files.zip
 
 # download key for private ec2 company soc
-aws s3 cp s3://s3-ctf-files-bucket/keys/soc-key.pem ~/key-to-company-soc.pem
+aws s3 cp s3://s3-ctf-files-bucket-UNIQUE_ID/keys/soc-key.pem ~/key-to-company-soc.pem
 
 # vsftpd
 apt-get install -y vsftpd

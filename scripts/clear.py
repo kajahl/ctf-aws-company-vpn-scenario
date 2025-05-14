@@ -4,6 +4,18 @@ import shutil
 # Ścieżka bazowa skryptu (lokalizacja pliku clear.py)
 base_path = os.path.dirname(os.path.abspath(__file__))
 
+# Usuń S3 Unique ID
+s3_unique_id_path = os.path.join(base_path, '../files/s3_unique_id.txt')
+file_bucket_path = os.path.join(base_path, '../infrastructure/s3/file-bucket.tf')
+
+if os.path.exists(s3_unique_id_path):
+    os.remove(s3_unique_id_path)
+    print(f"Usunięto plik: {s3_unique_id_path}")
+
+if os.path.exists(file_bucket_path):
+    os.remove(file_bucket_path)
+    print(f"Usunięto plik: {file_bucket_path}")
+
 # Katalogi z EC2
 ec2_directories = [
     os.path.join(base_path, '../infrastructure/public/ec2'),

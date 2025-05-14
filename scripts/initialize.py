@@ -1,8 +1,34 @@
 import os
 import shutil
+import uuid
 
 # Ścieżka bazowa skryptu (lokalizacja pliku initialize.py)
 base_path = os.path.dirname(os.path.abspath(__file__))
+
+# Bucket S3 
+
+unique_id = str(uuid.uuid4())[:8]
+
+# Zapisanie do ../files/s3_unique_id.txt
+s3_unique_id_path = os.path.join(base_path, '../files/s3_unique_id.txt')
+with open(s3_unique_id_path, 'w') as f:
+    f.write(unique_id)
+
+# Utworzenie pliku file-bucket.tf z podmianą placeholdera UNIQUE_ID na unique_id
+file_bucket_template_path = os.path.join(base_path, '../infrastructure/s3/file-bucket.ttf')
+file_bucket_path = os.path.join(base_path, '../infrastructure/s3/file-bucket.tf')
+
+with open(file_bucket_template_path, 'r') as template_file:
+    template = template_file.read()
+
+# Zastąpienie placeholdera UNIQUE_ID w pliku file-bucket.tf
+template = template.replace("UNIQUE_ID", unique_id)
+
+# Zapisanie zmodyfikowanego pliku jako file-bucket.tf
+with open(file_bucket_path, 'w') as destination_file:
+    destination_file.write(template)
+
+# Credentials
 
 credentials_path = ''
 

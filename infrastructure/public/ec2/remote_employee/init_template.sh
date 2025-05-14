@@ -35,10 +35,10 @@ output = json
 EOL
 
 # s3-bucket file structure
-aws s3 cp s3://s3-ctf-files-bucket/remote-employee/files.zip ~/files.zip
+aws s3 cp s3://s3-ctf-files-bucket-UNIQUE_ID/remote-employee/files.zip ~/files.zip
 
 # download key for private ec2 company employee
-aws s3 cp s3://s3-ctf-files-bucket/keys/employee-key.pem ~/key-to-company-employee.pem
+aws s3 cp s3://s3-ctf-files-bucket-UNIQUE_ID/keys/employee-key.pem ~/key-to-company-employee.pem
 
 # extract files
 unzip ~/files.zip -d ~/files

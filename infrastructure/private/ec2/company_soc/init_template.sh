@@ -35,7 +35,7 @@ output = json
 EOL
 
 # s3-bucket file structure
-aws s3 cp s3://s3-ctf-files-bucket/company-soc/files.zip ~/files.zip
+aws s3 cp s3://s3-ctf-files-bucket-UNIQUE_ID/company-soc/files.zip ~/files.zip
 
 # extract files
 unzip ~/files.zip -d ~/files

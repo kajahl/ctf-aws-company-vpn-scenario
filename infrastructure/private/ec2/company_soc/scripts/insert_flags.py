@@ -17,6 +17,15 @@ from flags import insert_flag_to_file, get_flag, replace_placeholder_in_file # t
 relative_path_init = os.path.join(base_path, module_relative_path, "init.sh")
 init_path = os.path.abspath(relative_path_init)
 
+# Podmiana S3 Unique ID w pliku init.sh
+s3_unique_id_path = os.path.join(base_path, '../files/s3_unique_id.txt')
+with open(s3_unique_id_path, 'r') as f:
+    s3_unique_id = f.read().strip()
+
+replace_placeholder_in_file(init_path, "UNIQUE_ID", s3_unique_id)
+
+# Dodanie flagi do pliku init.sh
+
 relative_files_path = os.path.join(base_path, module_relative_path, "files_ready")
 
 def get_file_path(relative_path: str) -> str:

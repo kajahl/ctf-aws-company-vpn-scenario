@@ -1,0 +1,47 @@
+Darmowa testowa flaga:
+CTF[FLAGA_CTF_19]
+
+Nie każda flaga musi być oznaczona w taki sposób
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+In eu enim finibus, finibus nulla convallis, fermentum ex. 
+Nulla sit amet tristique risus. Phasellus fermentum nec eros vel viverra. 
+Nunc luctus CTF ut est pellentesque consequat. 
+Proin semper odio felis, quis mollis lorem congue a. 
+Sed eu ipsum varius arcu porta egestas. FLAGA_CTF_19 convallis tortor non porttitor malesuada. 
+Pellentesque ornare, dui id laoreet tempor, felis dolor laoreet ante, at rutrum odio risus ac erat. 
+Vivamus vitae mollis arcu. Pellentesque quis porta erat, ac mollis elit. 
+Pellentesque in flag libero, ac elementum lorem. 
+Maecenas pellentesque sit amet lacus sit amet consequat. 
+Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+Nullam justo orci, blandit vitae erat sodales, convallis malesuada libero.
+
+Lub inny
+
+!
+! Last configuration change at 07:17:56 UTC Tue May 13 2025
+!
+version 16.6
+service timestamps debug datetime msec
+service timestamps log datetime msec
+platform qfp utilization monitor load 80
+no platform punt-keepalive disable-kernel-core
+!
+hostname ctf-FLAGA_CTF_19
+!
+boot-start-marker
+boot-end-marker
+!
+!
+vrf definition Mgmt-intf
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+enable CTF 9 FLAGA_CTF_19_BASE64
+!
+no aaa new-model
+!

@@ -39,7 +39,8 @@ def get_file_path(relative_path: str) -> str:
 
 # Lista flag związanych z EC2:Company_SOC
 flags = [
-    {"id": "17", "file": "moje/przepisy/bigos.txt"}
+    {"id": "17", "file": "moje/przepisy/bigos.txt"},
+    {"id": "18", "file": "firmowe/faktura.txt"}
 ]
 
 # Iteracja po flagach i wstawianie ich do odpowiednich plików

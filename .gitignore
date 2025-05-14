@@ -48,7 +48,7 @@ init.sh
 # unique flags per session
 flags.csv
 s3_unique_id.txt
-infrastructure/s3/file-bucket.tf
+file-bucket.tf
 
 # ec2 files
 files_ready

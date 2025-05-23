@@ -14,6 +14,6 @@
 14;plik case_37.txt (System Diagnostic) /w EC2:Company_SOC (base64);FLAGA_CTF_14
 15;plik image3.jpg /w EC2:Company_SOC (base64);FLAGA_CTF_15
 16;plik .pem - klucz prywatny /w EC2:Company_Archive - Jest to klucz do SSH EC2:Company_SOC;FLAGA_CTF_16
-17;flaga w bigosie;FLAGA_CTF_17
-18;flaga w fakturze;FLAGA_CTF_18
-19;darmowa flaga;FLAGA_CTF_19
+17;flaga w bigosie /w EC2:Remote_Employee;FLAGA_CTF_17
+18;flaga w fakturze /w EC2:Remote_Employee;FLAGA_CTF_18
+19;darmowa flaga /w EC2:Remote_Employee;FLAGA_CTF_19
